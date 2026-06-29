@@ -146,4 +146,23 @@
                 document.getElementById('message').value = `I'm interested in the ${serviceName}. Please provide more details.`;
             });
         });
-  
+  const dot=document.querySelector(".cursor-dot");
+const ring=document.querySelector(".cursor-ring");
+
+document.addEventListener("mousemove",(e)=>{
+
+dot.style.left=e.clientX+"px";
+dot.style.top=e.clientY+"px";
+
+ring.style.left=e.clientX+"px";
+ring.style.top=e.clientY+"px";
+
+});
+window.addEventListener("load",()=>{
+
+document
+.querySelector(".loader")
+.classList
+.add("hide");
+
+});
