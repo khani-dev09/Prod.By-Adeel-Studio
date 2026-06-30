@@ -337,6 +337,48 @@
     transform: translateY(-3px);
     box-shadow: 0 10px 30px rgba(212,175,55,0.4);
 }
+.gallery-filter{
+
+display:flex;
+
+justify-content:center;
+
+gap:15px;
+
+flex-wrap:wrap;
+
+margin-bottom:40px;
+
+}
+
+
+.gallery-filter button{
+
+padding:12px 28px;
+
+border:1px solid #D4AF37;
+
+background:transparent;
+
+color:#D4AF37;
+
+border-radius:40px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+
+.gallery-filter button:hover,
+.gallery-filter .active{
+
+background:#D4AF37;
+
+color:black;
+
+}
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .gallery-grid {
@@ -347,7 +389,107 @@
         height: 250px;
     }
 }
+@media(max-width:768px){
 
+.gallery-filter{
+
+gap:10px;
+
+}
+
+.gallery-filter button{
+
+padding:10px 18px;
+
+}
+
+}
+/* video sectio */
+#videos{
+
+padding:100px 10%;
+
+}
+#videos .gallery-item{
+position:relative;
+}
+
+
+#videos .gallery-item::after{
+
+content:"▶";
+
+position:absolute;
+
+top:50%;
+
+left:50%;
+
+transform:
+translate(-50%,-50%);
+
+font-size:70px;
+
+color:white;
+
+opacity:.9;
+
+transition:.3s;
+
+}
+
+
+#videos .gallery-item:hover::after{
+
+color:#D4AF37;
+
+transform:
+translate(-50%,-50%)
+scale(1.2);
+
+}
+#videos .gallery-item{
+
+aspect-ratio:16/9;
+
+}
+#videos h3{
+
+margin-top:15px;
+
+text-align:center;
+
+color:#D4AF37;
+
+}
+/*Drone Section */
+#drone{
+
+padding:100px 10%;
+
+}
+
+#drone .gallery-item{
+
+aspect-ratio:16/9;
+
+}
+
+#drone h3{
+
+margin-top:15px;
+
+text-align:center;
+
+color:#D4AF37;
+
+}
+#drone .gallery-item:hover{
+
+transform:
+translateY(-8px);
+
+}
         /* Lightbox Modal */
         .lightbox {
             display: none;
@@ -559,7 +701,82 @@
             color: var(--text-light);
             box-shadow: 0 10px 40px rgba(212,175,55,0.5);
         }
+/*Why us*/
+#why-us{
 
+padding:100px 10%;
+
+}
+
+#why-us .service-card{
+
+text-align:center;
+
+padding:40px;
+
+}
+#stats{
+
+padding:80px 10%;
+
+}
+
+
+.stats-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(
+auto-fit,
+minmax(220px,1fr)
+);
+
+gap:25px;
+
+}
+
+
+.stat-card{
+
+padding:40px;
+
+text-align:center;
+
+border-radius:20px;
+
+background:
+rgba(255,255,255,.03);
+
+border:
+1px solid
+rgba(212,175,55,.15);
+
+transition:.3s;
+
+}
+
+
+.stat-card:hover{
+
+transform:
+translateY(-8px);
+
+border-color:
+#D4AF37;
+
+}
+
+
+.stat-card h2{
+
+font-size:48px;
+
+color:#D4AF37;
+
+margin-bottom:10px;
+
+}
         /* ============================================
            CONTACT SECTION
         ============================================ */
